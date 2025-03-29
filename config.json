@@ -1,0 +1,46 @@
+{
+    "general": 
+    {
+        "mode": "Normal"
+    },
+
+    "llm": 
+    {
+        "base_url": "https://api.siliconflow.cn/v1",
+        "model_id": "deepseek-ai/DeepSeek-R1",
+        "api_key": "sk-ydpciaoadfqipmfhtegnoroupafkfejgcbsjbjsdcdyzwvwf"
+    },
+
+    "pdf_scan":
+    {
+        "output_filename": "log/output1-pages.json" 
+    },
+    
+    "section_split":
+    {
+        "output_filename": "log/output2-sections.json" ,
+        "header_tokens": [ "part", "article", "section", "chapter", "annex", "appendix", "index" ],
+        "page_header": "EN Official Journal of the European Union"
+    },
+    
+    "content_analyze":
+    {
+        "output_filename": "log/output3-analyze.json",
+        "user_prompt": "输入的是欧盟的自动驾驶的ELKS法规 EU 2021/646。",
+        "user_query": 
+        [
+            "将输入条目中的 input_content 翻译成中文。文本中的CDCF应翻译为方向修正控制功能。",
+            "通过全文分析，得到此项法规内容对应的标准或法规的需求的内容，例如如功能要求和性能实现等。若此项法规内容与标准或法规的需求无关，则为空。输出使用中文",
+            "通过全文分析，得到此项法规内容对应的测试方法以及测试方法对应的章节号。若此项法规内容与测试方法无关，则为空。输出使用中文",
+            "通过全文分析，得到此项法规内容对应的标准或法规的解读说明，例如法规澄清、认证要求、额外信息等。若不涉及，则为空。输出使用中文"
+        ]
+    },
+
+    "excel_generate":
+    {
+        "output_filename": "output.xlsx",
+        "title": ["序号", "页码", "章节号", "原文", "中文翻译", "标准需求", "测试方法", "标准解读"],
+        "row_height": "auto",
+        "col_width": [8, 8, 10, 70, 50, 30, 20, 50]
+    }
+}
