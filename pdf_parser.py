@@ -10,7 +10,7 @@ This script provides end-to-end processing of PDF documents including:
 Author: wanglei 00567749
 Created: 2025-03-16
 Version: 1.0.0
-Email: wanglei888@huawei.com
+Email: chestthinker@163.com
 """
 
 
